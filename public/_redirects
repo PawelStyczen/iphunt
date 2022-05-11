@@ -1,1 +1,1 @@
-/api/* http://api.ipstack.com/:splat 200
+force: /api/* http://api.ipstack.com/:splat 200
