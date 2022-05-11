@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   const getUserIp = () => {
-    fetch(`http://api.ipstack.com/check?access_key=${API_KEY}`)
+    fetch(`/api/check?access_key=${API_KEY}`)
       .then((response) => response.json())
       .then((data) => {
         setUserLocation(data);
@@ -46,7 +46,7 @@ function App() {
   const getIpDetails = (e) => {
     e.preventDefault();
     if (checkIfValidIp(searchIp)) {
-      fetch(`http://api.ipstack.com/${searchIp}?access_key=${API_KEY}`)
+      fetch(`/api/${searchIp}?access_key=${API_KEY}`)
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
