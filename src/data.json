@@ -1,0 +1,20 @@
+{
+  "city": "Śródmieście",
+  "continent_code": "EU",
+  "continent_name": "Europe",
+  "country_code": "PL",
+  "country_name": "Poland",
+  "ip": "188.147.32.147",
+  "latitude": "52.2317008972168",
+  "location": {
+    "geoname_id": 758470,
+    "capital": "Warsaw",
+    "languages": "Array(1)",
+    "country_flag": "https://assets.ipstack.com/flags/pl.svg"
+  },
+  "longitude": 21.018339157104492,
+  "region_code": "MZ",
+  "region_name": "Mazovia",
+  "type": "ipv4",
+  "zip": "00-025"
+}
