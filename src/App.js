@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   const getUserIp = () => {
-    fetch(`/api/check?access_key=${API_KEY}`)
+    fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}`)
       .then((response) => response.json())
       .then((data) => {
         setUserLocation(data);
@@ -46,7 +46,9 @@ function App() {
   const getIpDetails = (e) => {
     e.preventDefault();
     if (checkIfValidIp(searchIp)) {
-      fetch(`/api/${searchIp}?access_key=${API_KEY}`)
+      fetch(
+        `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${searchIp}`
+      )
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
@@ -71,6 +73,10 @@ function App() {
 
   const showSearchHistory = () => {
     setShowMobileMenu(!showMobileMenu);
+  };
+
+  const checkIfAlreadyLoaded = () => {
+    return searchIp;
   };
 
   const checkIfValidIp = (str) => {
